@@ -3,7 +3,8 @@ const serverless = require("serverless-http");
 const cors = require("cors");
 const app = express();
 const authRouter = require("../routes/router.js");
-app.use(cors({ origin: '*',method:'*'}));
+app.use(cors({"origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE"}));
 app.use(express.json());
 
 
